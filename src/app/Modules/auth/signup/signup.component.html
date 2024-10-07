@@ -1,0 +1,31 @@
+<div class="signup-card">
+    <div class="card-title">
+        <h1>Create Account</h1>
+        <span>Already have an account? <a routerLink="/auth/login">Sign In</a></span>
+    </div>
+   <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmitSignUp()">
+        <label for="firstName">Name</label>
+        <input type="text" (input)="onInputChange($event)" placeholder="Name" formControlName="first_name" id="firstName">
+        <div *ngIf="signupForm.get('first_name').invalid && signupForm.get('first_name').touched">
+            <small *ngIf="signupForm.get('first_name').hasError('required')">Name is required</small>
+            <small *ngIf="signupForm.get('first_name').hasError('minlength')">Name must be at least 3 characters long</small>
+          </div>
+        <label for="emailAddress">Email</label>
+        <input type="email" placeholder="Email" formControlName="email" id="emailAddress">
+        <div *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">
+            <small *ngIf="signupForm.get('email').hasError('required')">Email is required</small>
+            <small *ngIf="signupForm.get('email').hasError('email')">Invalid email format</small>
+          </div>
+        <label for="userPassword">Password</label>
+        <input type="password" placeholder="Password" formControlName="password" id="userPassword">
+        <div *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">
+            <small *ngIf="signupForm.get('password').hasError('required')">Password is required</small>
+            <small *ngIf="signupForm.get('password').hasError('minlength')">Password must be at least 6 characters long</small>
+          </div>
+      <!--  <input type="submit" value="Signup"> -->
+      <button type="submit" [ngClass] ="{'signUpBtnDisabled':signupForm.invalid,'signUpBtnEnabled':signupForm.valid}"[disabled]="signupForm.invalid">Submit</button>
+   </form>
+   <!-- <div class="card-terms">
+        <input type="checkbox" id="terms-condition" name="terms-condition"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+    </div> -->
+</div>

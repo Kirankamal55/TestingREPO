@@ -1,0 +1,58 @@
+<!-- <section class="theme-bg news-events">
+    <div class="container-fluid h-100 pl-50 pr-50">
+
+        <div class="news-events-main">
+            <h1>Blogs & Events</h1>
+
+            <div class="news-events-lists">
+                <div class="row d-flex align-items-center" *ngFor="let newsEvent of newsAndEvents">
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <div class="news-events-list-left">
+                            <div class="news-list-image">
+                                <img src="{{newsEvent?.news_event_pic}}" onerror="this.src='assets/img/news-events-1.png'" alt="news-events">
+                            </div>
+                            <div class="news-list-content">
+                                <ul>
+                                    <li><img src="/assets/img/calendar.png" alt="date"> Posted on : {{newsEvent?.createdAt | date}}</li>
+                                    <li><img src="/assets/img/label.png" alt="news"> {{newsEvent?.news_event_type == 'events' ? 'Event' : 'News'}}</li>
+                                </ul>
+                                <h2>{{newsEvent?.title || "N/A"}}</h2>
+                                <p [innerHTML]="newsEvent?.description || 'N/A'"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="news-events-button-right">
+                            <a *ngIf="newsEvent?.news_event_type == 'events'" class="btn theme-btn" routerLink="/cms/event-detail/{{newsEvent?._id}}">Read More</a>
+
+                            <a *ngIf="newsEvent?.news_event_type == 'news'" class="btn theme-btn" routerLink="/cms/news-detail/{{newsEvent?._id}}">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div *ngIf="this.totalNewsAndEventListing > 0"  style="position: relative;left:0px;right:0px; margin: 15px -10px 15px 0px;" class="pagination-main d-flex justify-content-center" > -->
+                       
+                         
+                    <!-- Showing: {{currentPage}} to {{limit}}  of Total {{totalNewsAndEventListing}} -->
+               
+              
+                  <!--  <pagination-controls previousLabel="Previous" nextLabel="Next" class="pagination-list" (pageChange)="pageChangeEvent($event)"></pagination-controls> -->
+                   
+          
+          
+          <!--       </div>
+
+                
+
+                <div class="no-record-found" *ngIf="newsAndEvents.length <= 0">
+                    <p class="no-record-found-pagination">No Blogs & Events Found</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section> -->
+
+blogs and events
